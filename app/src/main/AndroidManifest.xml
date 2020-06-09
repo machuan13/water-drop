@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yuukidach.ucount">
+    <!-- 可选权限说明-->
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <!--允许应用程序联网（必须）-->
+    <uses-permission
+        android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许访问WiFi网络状态信息（必须）-->
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE" />
+    <!--允许读取手机状态（必须）-->
+   <uses-permission
+       android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许访问网络状态（必须）-->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许写手机存储（必须）-->
+     <uses-permission
+         android:name="android.permission.RECEIVE_SMS" />
+    <!--GUI自动填充验证码功能（非必须）-->
+    <uses-permission
+        android:name="android.permission.READ_SMS" />
+    <!--从短信中读取验证码接口（非必须）-->
+    <uses-permission
+        android:name="android.permission.READ_CONTACTS" />
+    <!--应用内好友功能（非必须）-->
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/timg1"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".CountActivity"></activity>
+        <activity android:name=".MineActivity"></activity>
+        <activity
+            android:name=".MainActivity"
+           >
+        </activity>
+        <activity android:name=".AddItemActivity" />
+        <activity
+            android:name=".AddDescription"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity android:name=".BaseActivity"></activity>
+        <activity android:name=".loginActivity"
+            android:theme="@style/StartWindow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+ </manifest>
